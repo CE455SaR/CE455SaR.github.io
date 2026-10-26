@@ -1,0 +1,938 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>César Sánchez · Portafolio profesional</title>
+<meta name="description" content="Portafolio profesional de César Eduardo Sánchez Rivera, Ingeniería en Gestión de Tecnologías de la Información. Gestión de proyectos, desarrollo de software y soporte de TI.">
+<meta name="author" content="César Eduardo Sánchez Rivera">
+<meta name="theme-color" content="#0A0C11">
+<meta property="og:type" content="website">
+<meta property="og:title" content="César Sánchez · Portafolio profesional">
+<meta property="og:description" content="Gestión de TI, desarrollo de software y coordinación de proyectos.">
+<meta property="og:image" content="https://portafoliosfit.um.edu.mx/cesarsanchez/wp-content/uploads/sites/184/2025/04/Captura-de-pantalla-2025-04-29-001026-1024x482.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A0C11'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-weight='700' font-size='28' text-anchor='middle' fill='%237CF2A4'%3ECS%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>html,body{margin:0;padding:0;background:#0A0C11}html{scroll-behavior:auto}</style>
+</head>
+<body>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+#csx{
+  --bg:#0A0C11; --bg2:#10131B; --card:#151925; --line:#232838;
+  --tx:#E9EDF4; --mut:#8C94A8; --acc:#7CF2A4; --acc2:#7C9CFF; --warm:#FFC46B;
+  --fd:'Space Grotesk',system-ui,sans-serif; --fb:'Inter',system-ui,sans-serif; --fm:'JetBrains Mono',ui-monospace,monospace;
+  position:relative; background:var(--bg); color:var(--tx); font-family:var(--fb);
+  font-size:17px; line-height:1.6; overflow-x:clip; -webkit-font-smoothing:antialiased;
+}
+#csx *,#csx *::before,#csx *::after{box-sizing:border-box;margin:0;padding:0;border:0}
+#csx h1,#csx h2,#csx h3,#csx h4{font-family:var(--fd);color:var(--tx);letter-spacing:-.02em;line-height:1.05;font-weight:600;text-transform:none}
+#csx p{color:var(--tx);margin:0}
+#csx a{color:inherit;text-decoration:none}
+#csx img{display:block;max-width:100%;height:auto;border-radius:0}
+#csx ul{list-style:none}
+#csx .wrap{width:min(1200px,100% - 40px);margin-inline:auto}
+#csx .mono{font-family:var(--fm);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mut)}
+#csx .acc{color:var(--acc)}
+
+/* ---------- barra de progreso y navegación ---------- */
+#csx .prog{position:fixed;top:0;left:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--acc),var(--acc2));z-index:60}
+#csx .nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:50;display:flex;gap:4px;align-items:center;
+  padding:6px;border-radius:999px;background:rgba(16,19,27,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--line)}
+#csx .nav a{font-size:.86rem;padding:8px 14px;border-radius:999px;color:var(--mut);transition:.25s;white-space:nowrap}
+#csx .nav a:hover{color:var(--tx)}
+#csx .nav a.on{background:var(--tx);color:var(--bg)}
+#csx .nav .logo{font-family:var(--fd);font-weight:700;color:var(--tx);padding:8px 12px}
+
+/* ---------- hero ---------- */
+#csx .hero{position:relative;min-height:100vh;display:grid;place-items:center;overflow:hidden;isolation:isolate}
+#csx .hero canvas{position:absolute;inset:0;width:100%;height:100%;z-index:-1}
+#csx .hero::after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at 50% 40%,transparent 0%,var(--bg) 75%)}
+#csx .hero-in{text-align:center;padding:120px 20px 80px}
+#csx .hero h1{font-size:clamp(3.2rem,12vw,10.5rem);font-weight:700;letter-spacing:-.05em;line-height:.9;margin:22px 0 28px}
+#csx .hero h1 .ch{display:inline-block;transform:translateY(110%);opacity:0;animation:csxUp .9s cubic-bezier(.2,.8,.2,1) forwards}
+#csx .hero h1 .ln{display:block;overflow:hidden;padding-bottom:.06em}
+#csx .hero h1 .ln:last-child{color:transparent;-webkit-text-stroke:1.5px var(--tx)}
+@keyframes csxUp{to{transform:none;opacity:1}}
+#csx .roles{font-family:var(--fd);font-size:clamp(1.1rem,2.6vw,1.6rem);color:var(--mut);height:1.6em;overflow:hidden}
+#csx .roles span{display:block;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+#csx .roles b{color:var(--acc);font-weight:500}
+#csx .cue{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:10px}
+#csx .cue i{width:1px;height:56px;background:linear-gradient(var(--acc),transparent);animation:csxCue 2s infinite}
+@keyframes csxCue{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* ---------- manifiesto (palabras que se encienden con el scroll) ---------- */
+#csx .mani{height:220vh;position:relative}
+#csx .mani-in{position:sticky;top:0;height:100vh;display:grid;place-items:center}
+#csx .mani p{font-family:var(--fd);font-size:clamp(1.8rem,4.6vw,3.8rem);line-height:1.18;letter-spacing:-.025em;font-weight:500;max-width:1100px;padding:0 20px}
+#csx .mani .w{opacity:.14;transition:opacity .25s}
+#csx .mani .w.hl{color:var(--acc)}
+#csx .mani .w.hl2{color:var(--acc2)}
+
+/* ---------- cifras ---------- */
+#csx .stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+#csx .stat{padding:44px 26px;border-right:1px solid var(--line)}
+#csx .stat:last-child{border-right:0}
+#csx .stat .n{font-family:var(--fd);font-size:clamp(2.6rem,5vw,4.2rem);font-weight:600;letter-spacing:-.04em;line-height:1}
+#csx .stat p{color:var(--mut);font-size:.92rem;margin-top:10px}
+
+/* ---------- índice de proyectos ---------- */
+#csx .sec{padding:140px 0}
+#csx .sec-h{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:56px;flex-wrap:wrap}
+#csx .sec-h h2{font-size:clamp(2.4rem,6vw,5rem)}
+#csx .idx a{display:grid;grid-template-columns:80px 1fr auto;gap:20px;align-items:center;padding:30px 0;border-top:1px solid var(--line);transition:padding .35s}
+#csx .idx a:last-child{border-bottom:1px solid var(--line)}
+#csx .idx a:hover{padding-left:18px}
+#csx .idx h3{font-size:clamp(1.5rem,3.4vw,2.6rem);transition:color .3s}
+#csx .idx a:hover h3{color:var(--acc)}
+#csx .idx .tg{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+#csx .pill{font-family:var(--fm);font-size:.72rem;padding:5px 11px;border:1px solid var(--line);border-radius:999px;color:var(--mut);white-space:nowrap}
+#csx .peek{position:fixed;left:0;top:0;width:340px;aspect-ratio:16/9;pointer-events:none;z-index:40;border-radius:12px;overflow:hidden;
+  opacity:0;transform:translate(-50%,-50%) scale(.8);transition:opacity .25s,transform .25s;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+#csx .peek.on{opacity:1;transform:translate(-50%,-50%) scale(1)}
+#csx .peek img{width:100%;height:100%;object-fit:cover;object-position:top}
+
+/* ---------- capítulos de proyecto (scrollytelling) ---------- */
+#csx .chap{padding:120px 0 60px;border-top:1px solid var(--line)}
+#csx .chap-h{display:grid;grid-template-columns:auto 1fr;gap:34px;align-items:end;margin-bottom:70px}
+#csx .chap-h .big{font-family:var(--fd);font-size:clamp(6rem,16vw,13rem);font-weight:700;line-height:.8;letter-spacing:-.06em;color:transparent;-webkit-text-stroke:1.5px var(--line)}
+#csx .chap-h h2{font-size:clamp(2rem,4.6vw,3.8rem);margin:10px 0 16px}
+#csx .chap-h .meta{display:flex;gap:8px;flex-wrap:wrap}
+#csx .scrolly{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;position:relative}
+#csx .stage{position:sticky;top:12vh;height:76vh;display:grid;place-items:center}
+#csx .vis{position:absolute;inset:0;display:grid;place-items:center;opacity:0;transform:scale(.96) translateY(14px);transition:opacity .6s,transform .8s cubic-bezier(.2,.8,.2,1);pointer-events:none}
+#csx .vis.on{opacity:1;transform:none;pointer-events:auto}
+#csx .browser{width:100%;border-radius:14px;overflow:hidden;background:var(--card);border:1px solid var(--line);box-shadow:0 40px 100px rgba(0,0,0,.55)}
+#csx .browser .bar{display:flex;gap:7px;align-items:center;padding:12px 14px;border-bottom:1px solid var(--line)}
+#csx .browser .bar i{width:10px;height:10px;border-radius:50%;background:var(--line)}
+#csx .browser .bar span{margin-left:10px;font-family:var(--fm);font-size:.7rem;color:var(--mut)}
+#csx .browser img{width:100%;cursor:zoom-in}
+#csx .cap{font-family:var(--fm);font-size:.74rem;color:var(--mut);margin-top:14px;letter-spacing:.02em}
+#csx .vis-col{width:100%}
+#csx .steps{padding:10vh 0 30vh}
+#csx .step{min-height:78vh;display:flex;flex-direction:column;justify-content:center;opacity:.25;transition:opacity .5s}
+#csx .step.on{opacity:1}
+#csx .step .mono{color:var(--acc);margin-bottom:14px}
+#csx .step h3{font-size:clamp(1.5rem,2.6vw,2.1rem);margin-bottom:18px}
+#csx .step p{color:#C7CDDA;font-size:1.02rem;margin-bottom:14px}
+#csx .step ul li{position:relative;padding-left:22px;margin:9px 0;color:#C7CDDA}
+#csx .step ul li::before{content:"";position:absolute;left:0;top:.7em;width:10px;height:1px;background:var(--acc)}
+#csx .chips{display:flex;flex-wrap:wrap;gap:10px;max-width:520px;justify-content:center}
+#csx .chip{font-family:var(--fd);font-size:1.15rem;padding:14px 22px;border-radius:14px;background:var(--card);border:1px solid var(--line);
+  opacity:0;transform:translateY(16px);transition:.5s cubic-bezier(.2,.8,.2,1)}
+#csx .vis.on .chip{opacity:1;transform:none}
+#csx .chip small{display:block;font-family:var(--fm);font-size:.66rem;color:var(--mut);letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px}
+#csx .res{display:grid;gap:14px;width:100%;max-width:520px}
+#csx .res div{padding:22px 24px;border-radius:14px;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--acc)}
+#csx .res b{font-family:var(--fd);font-size:1.25rem;font-weight:600;display:block;margin-bottom:4px}
+#csx .res span{color:var(--mut);font-size:.92rem}
+#csx svg.dg{width:100%;max-width:560px;height:auto}
+#csx svg.dg text{font-family:var(--fd);fill:var(--tx)}
+#csx svg.dg .sm{font-family:var(--fm);font-size:11px;fill:var(--mut);letter-spacing:.06em}
+#csx svg.dg .ln{stroke:var(--line);stroke-width:1.5;fill:none}
+#csx svg.dg .fl{stroke:var(--acc);stroke-width:1.5;fill:none;stroke-dasharray:6 8;animation:csxDash 1.6s linear infinite}
+@keyframes csxDash{to{stroke-dashoffset:-28}}
+#csx svg.dg .bx{fill:var(--card);stroke:var(--line);stroke-width:1.2}
+#csx svg.dg .bxa{fill:rgba(124,242,164,.08);stroke:var(--acc);stroke-width:1.2}
+#csx .doc{display:block;max-width:460px;padding:30px;border-radius:16px;background:var(--card);border:1px solid var(--line);transition:.3s}
+#csx .doc:hover{border-color:var(--acc);transform:translateY(-4px)}
+#csx .doc h4{font-size:1.4rem;margin:14px 0 8px}
+#csx .doc p{color:var(--mut);font-size:.94rem}
+#csx .doc .go{display:inline-block;margin-top:18px;color:var(--acc);font-family:var(--fm);font-size:.8rem}
+
+/* ---------- más proyectos (carrusel: arrastrar, flechas, trackpad o dedo) ---------- */
+#csx .hz{position:relative;padding:120px 0 100px;border-top:1px solid var(--line)}
+#csx .hz-ctl{display:flex;align-items:center;gap:10px}
+#csx .arw{width:52px;height:52px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--tx);font-size:1.2rem;cursor:pointer;display:grid;place-items:center;transition:.25s}
+#csx .arw:hover:not(:disabled){border-color:var(--acc);color:var(--acc);transform:scale(1.06)}
+#csx .arw:disabled{opacity:.3;cursor:default}
+#csx .hz-count{font-family:var(--fm);font-size:.8rem;color:var(--mut);min-width:64px;text-align:center}
+#csx .hz-track{display:flex;gap:28px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;
+  padding:10px max(20px,calc((100% - 1200px)/2)) 30px;scroll-padding-inline:max(20px,calc((100% - 1200px)/2));scrollbar-width:none;cursor:grab;user-select:none;-webkit-user-select:none}
+#csx .hz-track::-webkit-scrollbar{display:none}
+#csx .hz-track.drag{cursor:grabbing;scroll-snap-type:none;scroll-behavior:auto}
+#csx .hz-track.drag img{pointer-events:none}
+#csx .hz-bar{width:min(1200px,100% - 40px);margin:6px auto 0;height:2px;background:var(--line);border-radius:2px;overflow:hidden}
+#csx .hz-bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--acc),var(--acc2));transition:width .2s}
+#csx .card{flex:0 0 min(440px,82vw);scroll-snap-align:start;border-radius:18px;background:var(--card);border:1px solid var(--line);overflow:hidden;
+  transition:transform .5s cubic-bezier(.2,.8,.2,1),opacity .5s,border-color .3s;opacity:.55;transform:scale(.95)}
+#csx .card.act{opacity:1;transform:none;border-color:#2f3650}
+#csx.js .hz .card{translate:0 60px;transition:transform .5s cubic-bezier(.2,.8,.2,1),opacity .5s,border-color .3s,translate .9s cubic-bezier(.2,.8,.2,1)}
+#csx.js .hz.in .card{translate:0 0}
+#csx.js .hz.in .card:nth-child(2){transition-delay:0s,0s,0s,.08s}#csx.js .hz.in .card:nth-child(3){transition-delay:0s,0s,0s,.16s}
+#csx.js .hz.in .card:nth-child(4){transition-delay:0s,0s,0s,.24s}#csx.js .hz.in .card:nth-child(5){transition-delay:0s,0s,0s,.32s}
+#csx .card .im{aspect-ratio:16/10;overflow:hidden;background:var(--bg2)}
+#csx .card .im img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .8s;cursor:zoom-in}
+#csx .card:hover .im img{transform:scale(1.05)}
+#csx .card .bd{padding:24px}
+#csx .card h3{font-size:1.45rem;margin:8px 0 10px}
+#csx .card p{color:var(--mut);font-size:.93rem}
+#csx .card .meta{display:flex;gap:6px;flex-wrap:wrap;margin-top:16px}
+
+/* ---------- experiencia ---------- */
+#csx .xp{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}
+#csx .xp-side{position:sticky;top:18vh;align-self:start}
+#csx .xp-side h3{font-size:clamp(2rem,4vw,3.2rem);margin:14px 0}
+#csx .xp-side p{color:var(--mut)}
+#csx .tl{position:relative;padding-left:34px}
+#csx .tl::before{content:"";position:absolute;left:6px;top:0;bottom:0;width:1px;background:var(--line)}
+#csx .tl .fill{position:absolute;left:6px;top:0;width:1px;height:0;background:var(--acc);box-shadow:0 0 12px var(--acc)}
+#csx .tl li{position:relative;padding:26px 0;border-bottom:1px solid var(--line)}
+#csx .tl li::before{content:"";position:absolute;left:-33px;top:34px;width:11px;height:11px;border-radius:50%;background:var(--bg);border:1px solid var(--mut);transition:.4s}
+#csx .tl li.in::before{background:var(--acc);border-color:var(--acc)}
+#csx .tl h4{font-size:1.2rem;margin-bottom:6px}
+#csx .tl p{color:var(--mut);font-size:.95rem}
+#csx .note{margin-top:30px;font-size:.85rem;color:var(--mut);padding:16px 18px;border:1px dashed var(--line);border-radius:12px}
+
+/* ---------- sobre mí ---------- */
+#csx .about{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}
+#csx .ph{position:relative;border-radius:20px;overflow:hidden;aspect-ratio:4/5}
+#csx .ph img{width:100%;height:120%;object-fit:cover;will-change:transform}
+#csx .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 55%,rgba(10,12,17,.85))}
+#csx .ph span{position:absolute;left:20px;bottom:18px;z-index:2}
+#csx .about h2{font-size:clamp(2.2rem,5vw,4rem);margin:14px 0 26px}
+#csx .about p{color:#C7CDDA;margin-bottom:16px}
+#csx .kv{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:30px}
+#csx .kv div{padding:18px;border-radius:14px;background:var(--card);border:1px solid var(--line)}
+#csx .kv b{display:block;font-family:var(--fd);font-size:1.05rem;margin-top:6px;font-weight:500}
+#csx .mq{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:26px 0;margin-top:120px}
+#csx .mq-t{display:flex;gap:46px;width:max-content;animation:csxMq 38s linear infinite}
+#csx .mq-t span{font-family:var(--fd);font-size:clamp(1.6rem,3.4vw,2.6rem);white-space:nowrap;color:var(--mut)}
+#csx .mq-t span:nth-child(odd){color:var(--tx)}
+#csx .mq-t em{font-style:normal;color:var(--acc)}
+@keyframes csxMq{to{transform:translateX(-50%)}}
+
+/* ---------- contacto ---------- */
+#csx .ct{text-align:center;padding:160px 0 120px}
+#csx .ct h2{font-size:clamp(3rem,11vw,9rem);letter-spacing:-.05em;line-height:.9;margin:20px 0 40px}
+#csx .ct h2 a{background:linear-gradient(90deg,var(--acc),var(--acc2));-webkit-background-clip:text;background-clip:text;color:transparent}
+#csx .btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+#csx .btn{padding:15px 26px;border-radius:999px;border:1px solid var(--line);font-weight:500;transition:.3s;display:inline-flex;gap:10px;align-items:center}
+#csx .btn:hover{border-color:var(--tx);transform:translateY(-3px)}
+#csx .btn.pri{background:var(--acc);color:var(--bg);border-color:var(--acc)}
+#csx .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:30px 0;border-top:1px solid var(--line)}
+
+/* ---------- botones del hero ---------- */
+#csx .hero-cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:40px;opacity:0;animation:csxFade .8s 1.3s forwards}
+@keyframes csxFade{to{opacity:1}}
+
+/* ---------- ficha de cada proyecto ---------- */
+#csx .ficha{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-top:26px}
+#csx .ficha div{background:var(--bg2);padding:16px 18px}
+#csx .ficha b{display:block;font-family:var(--fd);font-weight:500;font-size:1rem;margin-top:4px;line-height:1.3}
+
+/* ---------- indicador de paso en el escenario ---------- */
+#csx .stage-ind{position:absolute;left:0;top:0;display:flex;align-items:center;gap:14px;z-index:3}
+#csx .stage-ind .dots{display:flex;gap:6px}
+#csx .stage-ind .dots i{width:22px;height:3px;border-radius:2px;background:var(--line);transition:.4s}
+#csx .stage-ind .dots i.on{background:var(--acc);width:40px}
+#csx .ev{display:inline-flex;align-items:center;gap:8px;margin-top:10px;padding:11px 18px;border-radius:999px;border:1px solid var(--line);font-size:.9rem;transition:.3s}
+#csx .ev:hover{border-color:var(--acc);color:var(--acc)}
+
+/* ---------- contacto extra ---------- */
+#csx .btn svg{width:18px;height:18px;fill:currentColor}
+#csx .copy{cursor:pointer;background:none;color:var(--mut);font:inherit;font-family:var(--fm);font-size:.8rem;margin-top:18px;border-bottom:1px dashed var(--line);padding-bottom:2px}
+#csx .copy:hover{color:var(--acc)}
+#csx .soc{display:flex;gap:18px}
+#csx .soc a:hover{color:var(--acc)}
+
+/* ---------- lightbox ---------- */
+#csx .lb{position:fixed;inset:0;z-index:100;background:rgba(5,6,9,.92);display:none;place-items:center;padding:30px;cursor:zoom-out}
+#csx .lb.on{display:grid}
+#csx .lb img{max-width:min(1400px,96vw);max-height:84vh;border-radius:10px}
+#csx .lb p{color:var(--mut);margin-top:14px;text-align:center;font-family:var(--fm);font-size:.8rem}
+
+/* ---------- aparición al hacer scroll ---------- */
+#csx.js .rv{opacity:0;transform:translateY(40px);transition:opacity .9s,transform 1s cubic-bezier(.2,.8,.2,1)}
+#csx.js .rv.in{opacity:1;transform:none}
+
+/* ---------- sin JavaScript: todo visible y en orden ---------- */
+#csx:not(.js) .vis{position:static;opacity:1;transform:none;margin-bottom:40px}
+#csx:not(.js) .stage{position:static;height:auto;display:block}
+#csx:not(.js) .step{opacity:1;min-height:0;padding:30px 0}
+#csx:not(.js) .mani{height:auto}#csx:not(.js) .mani-in{position:static;height:auto;padding:120px 0}
+#csx:not(.js) .mani .w{opacity:1}
+#csx:not(.js) .hero h1 .ch{transform:none;opacity:1;animation:none}
+#csx:not(.js) .chip{opacity:1;transform:none}
+#csx:not(.js) .card{opacity:1;transform:none}
+#csx:not(.js) .stage-ind{display:none}
+
+/* ---------- responsive ---------- */
+/* Laptop pequeña */
+@media (max-width:1240px){
+  #csx .scrolly{gap:40px}
+  #csx .about,#csx .xp{gap:48px}
+}
+/* Tablet (horizontal y vertical) y celular: cada evidencia va junto a su texto, sin columna fija */
+@media (max-width:1100px){
+  #csx .chap{padding:90px 0 30px}
+  #csx .chap-h{grid-template-columns:1fr;gap:6px;margin-bottom:30px}
+  #csx .chap-h .big{font-size:clamp(5rem,14vw,8rem)}
+  #csx .scrolly{grid-template-columns:1fr;gap:0}
+  #csx.js .stage{display:none}
+  #csx .steps{padding:0}
+  #csx.js .step{opacity:1;min-height:0;padding:46px 0;border-top:1px solid var(--line)}
+  #csx .step .vis-m{position:static;opacity:1;transform:none;margin-top:26px;pointer-events:auto}
+  #csx .step .vis-m .chip{opacity:1;transform:none}
+  #csx .step .vis-m .chips{justify-content:flex-start;max-width:none}
+  #csx .step .vis-m svg.dg{max-width:520px}
+  #csx .step .vis-m .res,#csx .step .vis-m .doc{max-width:none}
+  #csx .peek{display:none}
+  #csx .stats .stat{padding:34px 20px}
+  #csx .sec{padding:110px 0}
+  #csx .mani p{font-size:clamp(1.8rem,5.4vw,3.2rem)}
+}
+/* Solo tablet: texto a la izquierda y evidencia a la derecha */
+@media (min-width:761px) and (max-width:1100px){
+  #csx.js .step{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:center}
+  #csx .step .vis-m{margin-top:0}
+  #csx .step:nth-child(even) .st-tx{order:2}
+  #csx .ficha{grid-template-columns:repeat(2,1fr)}
+  #csx .xp{grid-template-columns:.75fr 1.25fr;gap:40px}
+  #csx .about{grid-template-columns:.8fr 1.2fr;gap:40px}
+  #csx .kv{grid-template-columns:1fr 1fr}
+}
+/* Celular y tablet vertical chica */
+@media (max-width:760px){
+  #csx{font-size:16px}
+  #csx .roles{font-size:.98rem}
+  #csx .roles span span{white-space:nowrap}
+  #csx .nav a:not(.logo){padding:8px 10px;font-size:.78rem}
+  #csx .nav a.hide-m{display:none}
+  #csx .stats{grid-template-columns:repeat(2,1fr)}
+  #csx .stat:nth-child(2){border-right:0}
+  #csx .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  #csx .idx a{grid-template-columns:44px 1fr}
+  #csx .idx .tg{display:none}
+  #csx .ficha{grid-template-columns:1fr 1fr}
+  #csx .ficha div{padding:12px 14px}
+  #csx .chip{font-size:.95rem;padding:10px 14px}
+  #csx .res b{font-size:1.05rem}
+  #csx .xp,#csx .about{grid-template-columns:1fr;gap:40px}
+  #csx .xp-side{position:static}
+  #csx .kv{grid-template-columns:1fr}
+  #csx .sec{padding:100px 0}
+  #csx .hz{padding:90px 0 70px}
+  #csx .arw{width:44px;height:44px}
+  #csx .hz-count{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  #csx *,#csx *::before,#csx *::after{animation:none!important;transition:none!important}
+  #csx .hero h1 .ch{transform:none;opacity:1}
+}
+</style>
+
+<div id="csx">
+  <div class="prog" id="csxProg"></div>
+
+  <nav class="nav" aria-label="Navegación principal">
+    <a class="logo" href="#csx-top">CS</a>
+    <a href="#csx-proyectos" data-nav>Proyectos</a>
+    <a href="#csx-experiencia" data-nav>Experiencia</a>
+    <a href="#csx-sobre" data-nav class="hide-m">Sobre mí</a>
+    <a href="#csx-contacto" data-nav>Contacto</a>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <header class="hero" id="csx-top">
+    <canvas id="csxNet" aria-hidden="true"></canvas>
+    <div class="hero-in">
+      <p class="mono">Portafolio profesional · Ingeniería en Gestión de Tecnologías de la Información</p>
+      <h1 aria-label="César Sánchez"><span class="ln" data-split>César</span><span class="ln" data-split>Sánchez</span></h1>
+      <div class="roles" aria-live="polite"><span id="csxRoles">
+        <span>Conecto <b>gestión de TI</b> y procesos</span>
+        <span>Desarrollo <b>software</b> con Java y MySQL</span>
+        <span>Coordino <b>equipos multidisciplinarios</b></span>
+        <span>Diseño <b>soluciones centradas en el usuario</b></span>
+        <span>Conecto <b>gestión de TI</b> y procesos</span>
+      </span></div>
+      <div class="hero-cta">
+        <a class="btn pri" href="#csx-proyectos">Ver proyectos ↓</a>
+        <a class="btn" href="#csx-contacto">Contactar</a>
+      </div>
+    </div>
+    <div class="cue"><span class="mono">Scroll</span><i></i></div>
+  </header>
+
+  <!-- ===================== MANIFIESTO ===================== -->
+  <section class="mani" id="csxMani">
+    <div class="mani-in">
+      <!-- {texto} = verde · [texto] = azul -->
+      <p data-words>Soy {ingeniero} en formación en {Gestión de Tecnologías de la Información.} Me interesa el punto donde se cruzan la {tecnología,} los {procesos} y las {personas:} entender cómo opera una {organización,} [coordinar] a quienes la hacen funcionar y [construir soluciones] que se usen en el {mundo real.}</p>
+    </div>
+  </section>
+
+  <!-- ===================== CIFRAS ===================== -->
+  <!-- EDITA: verifica que las cifras sigan siendo correctas -->
+  <section class="wrap">
+    <div class="stats rv">
+      <div class="stat"><div class="n"><span data-count="4">0</span></div><p>años de formación en Ingeniería en Gestión de TI</p></div>
+      <div class="stat"><div class="n"><span data-count="9">0</span>+</div><p>proyectos académicos, de software y de servicio</p></div>
+      <div class="stat"><div class="n"><span data-count="4">0</span></div><p>áreas coordinadas en un mismo proyecto web (SEA)</p></div>
+      <div class="stat"><div class="n">B2</div><p>inglés certificado · Cambridge First (FCE)</p></div>
+    </div>
+  </section>
+
+  <!-- ===================== ÍNDICE ===================== -->
+  <section class="sec wrap" id="csx-proyectos">
+    <div class="sec-h rv">
+      <h2>Proyectos<br><span class="acc">destacados</span></h2>
+      <p class="mono">03 casos documentados</p>
+    </div>
+    <div class="idx rv">
+      <a href="#csx-p1" data-peek="https://portafoliosfit.um.edu.mx/cesarsanchez/wp-content/uploads/sites/184/2025/04/Captura-de-pantalla-2025-04-29-001026-1024x482.png">
+        <span class="mono">01</span><h3>Sitio web del Sistema Educativo Adventista</h3>
+        <span class="tg"><span class="pill">Gestión de proyectos</span><span class="pill">Desarrollo web</span></span>
+      </a>
+      <a href="#csx-p2" data-peek="https://portafoliosfit.um.edu.mx/cesarsanchez/wp-content/uploads/sites/184/2025/04/Captura-de-pantalla-2025-04-28-235642-1024x452.png">
+        <span class="mono">02</span><h3>Software de turnos médicos y tienda de abarrotes</h3>
+        <span class="tg"><span class="pill">Java</span><span class="pill">MySQL</span></span>
+      </a>
+      <a href="#csx-p3" data-peek="https://portafoliosfit.um.edu.mx/cesarsanchez/wp-content/uploads/sites/184/2024/04/Captura-de-pantalla-2024-04-23-153631-1024x517.png">
+        <span class="mono">03</span><h3>App de gestión financiera personal</h3>
+        <span class="tg"><span class="pill">Requisitos</span><span class="pill">UX · Nielsen</span></span>
+      </a>
+    </div>
+  </section>
+  <div class="peek" id="csxPeek"><img alt="" src=""></div>
+
+  <!-- ===================== PROYECTO 01 · SEA ===================== -->
+  <section class="chap" id="csx-p1">
+    <div class="wrap">
+      <div class="chap-h rv">
+        <div class="big">01</div>
+        <div>
+          <p class="mono">Gestión de proyectos tecnológicos · Desarrollo web</p>
+          <h2>Sitio web institucional del Sistema Educativo Adventista</h2>
+          <!-- EDITA: confirma año y tipo -->
+          <div class="ficha">
+            <div><span class="mono">Rol</span><b>Coordinador de equipos e integración</b></div>
+            <div><span class="mono">Año</span><b>2025</b></div>
+            <div><span class="mono">Tipo</span><b>Proyecto real · institución externa</b></div>
+            <div><span class="mono">Enfoque</span><b>Gestión de proyectos · Desarrollo web</b></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scrolly">
+        <div class="stage">
+          <div class="vis on" data-v="1"><div class="vis-col">
+            <div class="browser"><div class="bar"><i></i><i></i><i></i><span>sitio SEA · vista principal</span></div>
+              <img data-zoom src="https://portafoliosfit.um.edu.mx/cesarsanchez/wp-content/uploads/sites/184/2025/04/Captura-de-pantalla-2025-04-29-001026-1024x482.png" alt="Página principal del sitio web del Sistema Educativo Adventista" loading="lazy"></div>
+            <p class="cap">Fig. 1.1 — Vista principal del sitio. Clic para ampliar.</p>
+          </div></div>
+
+          <div class="vis" data-v="2">
+            <svg class="dg" viewBox="0 0 560 420" role="img" aria-label="Diagrama de coordinación entre cuatro áreas y el producto final">
+              <path class="fl" d="M140 80 C 200 80, 220 210, 280 210"/><path class="fl" d="M420 80 C 360 80, 340 210, 280 210"/>
+              <path class="fl" d="M140 340 C 200 340, 220 210, 280 210"/><path class="fl" d="M420 340 C 360 340, 340 210, 280 210"/>
+              <rect class="bx" x="40" y="52" width="200" height="56" rx="12"/><text x="140" y="86" text-anchor="middle" font-size="16">Marketing</text>
+              <rect class="bx" x="320" y="52" width="200" height="56" rx="12"/><text x="420" y="86" text-anchor="middle" font-size="16">Ingeniería</text>
+              <rect class="bx" x="40" y="312" width="200" height="56" rx="12"/><text x="140" y="346" text-anchor="middle" font-size="16">Comunicación</text>
+              <rect class="bx" x="320" y="312" width="200" height="56" rx="12"/><text x="420" y="346" text-anchor="middle" font-size="16">Diseño gráfico</text>
+              <rect class="bxa" x="190" y="176" width="180" height="68" rx="34"/><text x="280" y="206" text-anchor="middle" font-size="17" font-weight="600">Coordinación</text>
+              <text x="280" y="228" text-anchor="middle" class="sm">MI ROL</text>
+            </svg>
+          </div>
+
+          <div class="vis" data-v="3"><div class="chips">
+            <!-- EDITA: agrega las tecnologías web reales (p. ej., WordPress, HTML/CSS, Figma, Trello, Teams) -->
+            <div class="chip" style="transition-delay:.05s"><small>Metodología</small>Asignación por entregables</div>
+            <div class="chip" style="transition-delay:.12s"><small>Seguimiento</small>Reuniones periódicas</div>
+            <div class="chip" style="transition-delay:.19s"><small>Colaboración</small>Herramientas en línea</div>
+            <div class="chip" style="transition-delay:.26s"><small>Entornos</small>Presencial + virtual</div>
+            <div class="chip" style="transition-delay:.33s"><small>Producto</small>Sitio web institucional</div>
+          </div></div>
+
+          <div class="vis" data-v="4"><div class="res">
+            <div><b>Un producto coherente a partir de 4 áreas</b><span>Integré los aportes de marketing, ingeniería, comunicación y diseño en un mismo sitio.</span></div>
+            <div><b>Comunicación constante entre equipos</b><span>Seguimiento por entregables que mantuvo alineados a equipos presenciales y remotos.</span></div>
+            <!-- EDITA: si el sitio está publicado, añade aquí el enlace o un dato medible (páginas entregadas, plazos cumplidos) -->
+            <div><b>Liderazgo aplicado</b><span>Experiencia real coordinando a profesionales con perfiles distintos.</span></div>
+          </div></div>
+        </div>
+
+        <div class="steps">
+          <div class="step" data-s="1"><p class="mono">01 · Contexto y problema</p><h3>Una institución con muchas voces y un solo sitio</h3>
+            <p>El Sistema Educativo Adventista necesitaba un sitio web que presentara su información institucional de forma clara y consistente.</p>
+            <p>El reto no era solo técnico: el contenido y las decisiones venían de departamentos distintos, cada uno con prioridades propias.</p></div>
+          <div class="step" data-s="2"><p class="mono">02 · Mi rol</p><h3>Integrar el trabajo de cuatro áreas</h3>
+            <p>Mi responsabilidad fue coordinar a marketing, ingeniería, comunicación y diseño gráfico para que sus aportes se convirtieran en un producto final coherente y funcional.</p></div>
+          <div class="step" data-s="3"><p class="mono">03 · Herramientas y metodología</p><h3>Gestión por entregables</h3>
+            <ul><li>Asignación de tareas por entregables.</li><li>Reuniones periódicas de seguimiento.</li><li>Herramientas de colaboración en línea para coordinar equipos presenciales y virtuales.</li></ul></div>
+          <div class="step" data-s="4"><p class="mono">04 · Resultados e impacto</p><h3>De piezas sueltas a un sitio institucional</h3>
+            <p>El proyecto fortaleció mis habilidades de liderazgo, coordinación y gestión de equipos en un entorno real con una institución externa.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROYECTO 02 · JAVA + MYSQL ===================== -->
+  <section class="chap" id="csx-p2">
+    <div class="wrap">
+      <div class="chap-h rv">
+        <div class="big">02</div>
+        <div>
+          <p class="mono">Ingeniería de software · Bases de datos</p>
+          <h2>Software de turnos médicos y administración de tienda de abarrotes</h2>
+          <!-- EDITA: confirma año y tipo -->
+          <div class="ficha">
+            <div><span class="mono">Rol</span><b>Desarrollador de software</b></div>
+            <div><span class="mono">Año</span><b>2025</b></div>
+            <div><span class="mono">Tipo</span><b>Proyecto académico aplicado</b></div>
+            <div><span class="mono">Stack</span><b>Java · MySQL · POO</b></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scrolly">
+        <div class="stage">
+          <div class="vis on" data-v="1"><div class="vis-col">
+            <div class="browser"><div class="bar"><i></i><i></i><i></i><span>aplicación de escritorio · Java</span></div>
+              <img data-zoom src="https://portafoliosfit.um.edu.mx/cesarsanchez/wp-content/uploads/sites/184/2025/04/Captura-de-pantalla-2025-04-28-235642-1024x452.png" alt="Interfaz del software desarrollado en Java" loading="lazy"></div>
+            <p class="cap">Fig. 2.1 — Interfaz del sistema. Clic para ampliar.</p>
+          </div></div>
+
+          <div class="vis" data-v="2">
+            <!-- EDITA: idealmente reemplaza este esquema por tu diagrama entidad-relación real -->
+            <svg class="dg" viewBox="0 0 560 400" role="img" aria-label="Esquema por capas: interfaz, lógica orientada a objetos y base de datos MySQL">
+              <rect class="bx" x="80" y="30" width="400" height="74" rx="14"/><text x="110" y="62" font-size="18" font-weight="600">Interfaz de usuario</text><text x="110" y="84" class="sm">JAVA · PANTALLAS Y FORMULARIOS</text>
+              <path class="fl" d="M280 104 L280 160"/>
+              <rect class="bx" x="80" y="160" width="400" height="74" rx="14"/><text x="110" y="192" font-size="18" font-weight="600">Lógica de negocio</text><text x="110" y="214" class="sm">CLASES · PROGRAMACIÓN ORIENTADA A OBJETOS</text>
+              <path class="fl" d="M280 234 L280 290"/>
+              <rect class="bxa" x="80" y="290" width="400" height="74" rx="14"/><text x="110" y="322" font-size="18" font-weight="600">Base de datos</text><text x="110" y="344" class="sm">MYSQL · TURNOS · PRODUCTOS · VENTAS</text>
+            </svg>
+          </div>
+
+          <div class="vis" data-v="3"><div class="chips">
+            <div class="chip" style="transition-delay:.05s"><small>Lenguaje</small>Java</div>
+            <div class="chip" style="transition-delay:.12s"><small>Base de datos</small>MySQL</div>
+            <div class="chip" style="transition-delay:.19s"><small>Paradigma</small>Programación orientada a objetos</div>
+            <div class="chip" style="transition-delay:.26s"><small>Práctica</small>Mejora continua por iteraciones</div>
+            <!-- EDITA: agrega IDE y librerías reales (NetBeans, IntelliJ, JDBC, Swing, GitHub...) -->
+          </div></div>
+
+          <div class="vis" data-v="4"><div class="vis-col">
+            <div class="browser"><div class="bar"><i></i><i></i><i></i><span>módulo adicional</span></div>
+              <img data-zoom src="https://portafoliosfit.um.edu.mx/cesarsanchez/wp-content/uploads/sites/184/2025/04/Captura-de-pantalla-2025-04-29-000326-1024x300.png" alt="Segunda captura del software" loading="lazy"></div>
+            <p class="cap">Fig. 2.2 — Otro módulo del sistema. Clic para ampliar.</p>
+          </div></div>
+
+          <div class="vis" data-v="5"><div class="res">
+            <div><b>Sistema de turnos funcional</b><span>Aplicación en Java con persistencia de datos en MySQL.</span></div>
+            <div><b>Segundo sistema con requisitos de negocio</b><span>Software para administrar una tienda de abarrotes, construido con POO.</span></div>
+            <!-- EDITA: añade el enlace a GitHub y funcionalidades concretas (alta de productos, inventario, ventas, reportes...) -->
+            <div><b>Transferencia a situaciones reales</b><span>Principios de ingeniería de software aplicados a necesidades concretas.</span></div>
+          </div></div>
+        </div>
+
+        <div class="steps">
+          <div class="step" data-s="1"><p class="mono">01 · Contexto y problema</p><h3>Procesos que se hacían a mano</h3>
+            <p>Un consultorio necesita organizar turnos sin empalmes; una tienda de abarrotes necesita controlar productos y operaciones diarias.</p>
+            <p>Ambos casos comparten un problema: información dispersa que debería vivir en un sistema confiable.</p></div>
+          <div class="step" data-s="2"><p class="mono">02 · Arquitectura</p><h3>Separar interfaz, lógica y datos</h3>
+            <p>Estructuré el software en capas: pantallas para el usuario, clases que contienen la lógica del negocio y una base de datos MySQL que conserva la información.</p></div>
+          <div class="step" data-s="3"><p class="mono">03 · Herramientas y tecnologías</p><h3>Java, MySQL y diseño orientado a objetos</h3>
+            <p>Apliqué buenas prácticas de diseño de software, programación orientada a objetos y manejo eficiente de datos.</p></div>
+          <div class="step" data-s="4"><p class="mono">04 · Evidencia técnica</p><h3>Módulos en funcionamiento</h3>
+            <p>Las capturas muestran la interfaz del sistema. Haz clic en cualquier imagen para verla en tamaño completo.</p>
+            <!-- EDITA: cambia este enlace por el del repositorio exacto del proyecto -->
+            <a class="ev" href="https://github.com/CE455SaR" target="_blank" rel="noopener">Ver código en GitHub ↗</a></div>
+          <div class="step" data-s="5"><p class="mono">05 · Resultados e impacto</p><h3>Dos sistemas, un mismo método</h3>
+            <p>Llevé lo aprendido en ingeniería de software a dos dominios distintos y ajusté el diseño conforme surgían nuevas necesidades.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROYECTO 03 · APP FINANCIERA ===================== -->
+  <section class="chap" id="csx-p3">
+    <div class="wrap">
+      <div class="chap-h rv">
+        <div class="big">03</div>
+        <div>
+          <p class="mono">Diseño de software · Experiencia de usuario</p>
+          <h2>Aplicación de gestión financiera personal</h2>
+          <!-- EDITA: confirma año y tipo -->
+          <div class="ficha">
+            <div><span class="mono">Rol</span><b>Análisis de requisitos y diseño</b></div>
+            <div><span class="mono">Año</span><b>2024</b></div>
+            <div><span class="mono">Tipo</span><b>Proyecto académico</b></div>
+            <div><span class="mono">Enfoque</span><b>Requisitos · UX · Usabilidad</b></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scrolly">
+        <div class="stage">
+          <div class="vis on" data-v="1"><div class="vis-col">
+            <div class="browser"><div class="bar"><i></i><i></i><i></i><span>prototipo · app financiera</span></div>
+              <img data-zoom src="https://portafoliosfit.um.edu.mx/cesarsanchez/wp-content/uploads/sites/184/2024/04/Captura-de-pantalla-2024-04-23-153631-1024x517.png" alt="Interfaz de la aplicación de gestión financiera" loading="lazy"></div>
+            <p class="cap">Fig. 3.1 — Interfaz diseñada para la aplicación. Clic para ampliar.</p>
+          </div></div>
+
+          <div class="vis" data-v="2">
+            <svg class="dg" viewBox="0 0 560 430" role="img" aria-label="Proceso de cinco etapas: planificación, requisitos, interfaces, maquetación responsiva y pruebas de usabilidad">
+              <path class="ln" d="M60 40 L60 390"/><path class="fl" d="M60 40 L60 390"/>
+              <circle cx="60" cy="50" r="9" fill="var(--bg)" stroke="var(--acc)" stroke-width="1.5"/><text x="90" y="46" font-size="17" font-weight="600">Planificación del proyecto</text><text x="90" y="66" class="sm">ALCANCE Y CRONOGRAMA</text>
+              <circle cx="60" cy="130" r="9" fill="var(--bg)" stroke="var(--acc)" stroke-width="1.5"/><text x="90" y="126" font-size="17" font-weight="600">Definición de requisitos</text><text x="90" y="146" class="sm">FUNCIONALES Y NO FUNCIONALES</text>
+              <circle cx="60" cy="210" r="9" fill="var(--bg)" stroke="var(--acc)" stroke-width="1.5"/><text x="90" y="206" font-size="17" font-weight="600">Elaboración de interfaces</text><text x="90" y="226" class="sm">FLUJOS Y PANTALLAS</text>
+              <circle cx="60" cy="290" r="9" fill="var(--bg)" stroke="var(--acc)" stroke-width="1.5"/><text x="90" y="286" font-size="17" font-weight="600">Maquetación y diseño responsivo</text><text x="90" y="306" class="sm">ESCRITORIO Y MÓVIL</text>
+              <circle cx="60" cy="370" r="9" fill="var(--acc)"/><text x="90" y="366" font-size="17" font-weight="600">Pruebas de usabilidad</text><text x="90" y="386" class="sm">10 HEURÍSTICAS DE JAKOB NIELSEN</text>
+            </svg>
+          </div>
+
+          <div class="vis" data-v="3"><div class="chips">
+            <div class="chip" style="transition-delay:.05s"><small>Análisis</small>Requisitos funcionales / no funcionales</div>
+            <div class="chip" style="transition-delay:.12s"><small>Diseño</small>Interfaces</div>
+            <div class="chip" style="transition-delay:.19s"><small>Front-end</small>Diseño responsivo</div>
+            <div class="chip" style="transition-delay:.26s"><small>Evaluación</small>Heurísticas de Nielsen</div>
+            <!-- EDITA: agrega la herramienta de prototipado real (Figma, Adobe XD, etc.) -->
+          </div></div>
+
+          <div class="vis" data-v="4">
+            <!-- EDITA: este documento está en SharePoint de la UM. Compártelo como "Cualquier persona con el vínculo"
+                 o súbelo como PDF a la biblioteca de medios de WordPress y cambia este enlace. -->
+            <a class="doc" href="https://umedumx-my.sharepoint.com/:w:/g/personal/1220121_alumno_um_edu_mx/EVVXJxJtihhEoe4LFtC5ysoBUq3XSzsLFD2RLUHOlaM2LA?e=NjIfgj" target="_blank" rel="noopener">
+              <span class="mono">Documento del proyecto</span>
+              <h4>Especificación y diseño de la aplicación</h4>
+              <p>Requisitos, interfaces y evaluación heurística documentados de principio a fin.</p>
+              <span class="go">Abrir documento ↗</span>
+            </a>
+          </div>
+
+          <div class="vis" data-v="5"><div class="res">
+            <div><b>Requisitos priorizados</b><span>Necesidades de los usuarios traducidas a requisitos funcionales y no funcionales.</span></div>
+            <div><b>Interfaz evaluada, no solo diseñada</b><span>La usabilidad se revisó con las 10 heurísticas de Nielsen.</span></div>
+            <!-- EDITA: si registraste hallazgos de la evaluación (p. ej., "12 problemas detectados, 9 corregidos"), ponlos aquí -->
+            <div><b>Diseño listo para móvil y escritorio</b><span>Maquetación responsiva desde el inicio.</span></div>
+          </div></div>
+        </div>
+
+        <div class="steps">
+          <div class="step" data-s="1"><p class="mono">01 · Contexto y problema</p><h3>Administrar el dinero no debería ser complicado</h3>
+            <p>Muchas personas no llevan un control claro de sus finanzas porque las herramientas les resultan confusas. El objetivo fue diseñar una aplicación que facilitara esa tarea.</p></div>
+          <div class="step" data-s="2"><p class="mono">02 · Metodología</p><h3>Cinco etapas, de la idea a la prueba</h3>
+            <p>Seguí un proceso completo: planificación, requisitos, interfaces, maquetación responsiva y pruebas de usabilidad.</p></div>
+          <div class="step" data-s="3"><p class="mono">03 · Herramientas y métodos</p><h3>Diseño guiado por atributos de calidad</h3>
+            <p>Prioricé requisitos y atributos de calidad para que la aplicación fuera funcional, intuitiva y fácil de usar.</p></div>
+          <div class="step" data-s="4"><p class="mono">04 · Evidencia</p><h3>Todo el proceso, documentado</h3>
+            <p>El documento del proyecto reúne la especificación, el diseño y la evaluación.</p></div>
+          <div class="step" data-s="5"><p class="mono">05 · Resultados e impacto</p><h3>Un diseño validado con criterios profesionales</h3>
+            <p>El proyecto demuestra que puedo llevar un producto desde el análisis de necesidades hasta su evaluación con criterios reconocidos de usabilidad.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MÁS PROYECTOS (horizontal) ===================== -->
+  <section class="hz" id="csxHz" aria-label="Otros proyectos">
+      <div class="wrap sec-h" style="margin-bottom:34px">
+        <div>
+          <p class="mono" style="margin-bottom:12px">Arrastra, desliza o usa las flechas</p>
+          <h2 style="font-size:clamp(2rem,5vw,3.6rem)">Otros <span class="acc">proyectos</span></h2>
+        </div>
+        <div class="hz-ctl">
+          <button class="arw" id="csxPrev" type="button" aria-label="Proyecto anterior">←</button>
+          <span class="hz-count" id="csxCount">01 / 05</span>
+          <button class="arw" id="csxNext" type="button" aria-label="Siguiente proyecto">→</button>
+        </div>
+      </div>
+      <div class="hz-track" id="csxTrack" tabindex="0">
+        <article class="card"><div class="im"><img data-zoom loading="lazy" src="https://portafoliosfit.um.edu.mx/cesarsanchez/wp-content/uploads/sites/184/2024/04/Captura-de-pantalla-2024-04-23-144810-1024x523.png" alt="Plataforma Podium"></div>
+          <div class="bd"><p class="mono">Plataforma educativa</p><h3>Podium</h3><p>Plataforma con material de estudio, videotutoriales y guías para aspirantes universitarios, desarrollada en equipo de dos.</p>
+          <div class="meta"><span class="pill">Desarrollo web</span><span class="pill">Trabajo remoto</span></div></div></article>
+        <article class="card"><div class="im"><img data-zoom loading="lazy" src="https://portafoliosfit.um.edu.mx/cesarsanchez/wp-content/uploads/sites/184/2025/04/Captura-de-pantalla-2025-04-29-003959-1024x488.png" alt="Sitio web de IMER"></div>
+          <div class="bd"><p class="mono">ONG · Impacto social</p><h3>Sitio web de IMER</h3><p>Página web para una organización que defiende los derechos de mujeres, niñas y niños que viven violencia de género.</p>
+          <div class="meta"><span class="pill">Desarrollo web</span><span class="pill">Colaborativo</span></div></div></article>
+        <article class="card"><div class="im"><img data-zoom loading="lazy" src="https://portafoliosfit.um.edu.mx/cesarsanchez/wp-content/uploads/sites/184/2024/04/Captura-de-pantalla-2024-04-23-125925-1024x473.png" alt="Proyecto Style Libre"></div>
+          <div class="bd"><p class="mono">Equipo multidisciplinario</p><h3>Style Libre</h3><p>Proyecto con compañeros de Industrial, Sistemas y Gestión de TI, integrando perspectivas para una solución común.</p>
+          <div class="meta"><span class="pill">Interdisciplinario</span></div></div></article>
+        <article class="card"><div class="im"><img data-zoom loading="lazy" src="https://portafoliosfit.um.edu.mx/cesarsanchez/wp-content/uploads/sites/184/2023/04/IMG-20230427-WA0013-1-768x1024.jpg" alt="Página web de la purificadora La Carlota"></div>
+          <div class="bd"><p class="mono">Negocio local</p><h3>Purificadora La Carlota</h3><p>Primera presencia en línea de una purificadora: análisis de necesidades del negocio y estructura de navegación.</p>
+          <div class="meta"><span class="pill">Diseño web</span><span class="pill">Análisis</span></div></div></article>
+        <article class="card"><div class="im"><img data-zoom loading="lazy" src="https://portafoliosfit.um.edu.mx/cesarsanchez/wp-content/uploads/sites/184/2023/04/IMG-20230426-WA00211_edit_51435103790067.jpg" alt="Calculadora de IMC en Python"></div>
+          <div class="bd"><p class="mono">Salud · ODS ONU</p><h3>Calculadora de IMC</h3><p>Interfaz en Python que calcula el IMC y sugiere ejercicios y recetas según el resultado.</p>
+          <div class="meta"><span class="pill">Python</span><span class="pill">Interfaz</span></div></div></article>
+      </div>
+      <div class="hz-bar"><i id="csxBar"></i></div>
+  </section>
+
+  <!-- ===================== EXPERIENCIA ===================== -->
+  <section class="sec wrap" id="csx-experiencia">
+    <div class="xp">
+      <div class="xp-side rv">
+        <p class="mono">Experiencia profesional</p>
+        <h3>PlayAGS<br><span class="acc">IT Intern</span></h3>
+        <p>Junio 2026 – actualidad · Ciudad de México</p>
+        <p style="margin-top:14px">Soporte de TI y administración de recursos tecnológicos en un entorno empresarial.</p>
+      </div>
+      <div>
+        <ul class="tl" id="csxTl"><span class="fill"></span>
+          <li><h4>Atención a usuarios</h4><p>Solicitudes de equipos, aplicaciones, accesos y cuentas de usuario.</p></li>
+          <li><h4>Altas y bajas de personal</h4><p>Preparación, asignación y recuperación de equipos en incorporaciones y salidas.</p></li>
+          <li><h4>Gestión de dispositivos con Ivanti</h4><p>Seguimiento del estado de los equipos y despliegue de actualizaciones.</p></li>
+          <li><h4>Inventario de activos</h4><p>Control de equipos, accesorios y otros activos tecnológicos.</p></li>
+          <li><h4>Documentación de procesos</h4><p>Manuales de procedimientos internos para estandarizar las tareas de TI.</p></li>
+          <li><h4>Resolución de incidencias</h4><p>Trabajo en equipo para resolver problemas y mantener los recursos tecnológicos.</p></li>
+        </ul>
+        <p class="note">Por confidencialidad, esta sección no incluye capturas de sistemas internos ni datos de la empresa.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SOBRE MÍ ===================== -->
+  <section class="sec wrap" id="csx-sobre" style="padding-top:40px">
+    <div class="about">
+      <div class="ph rv"><img id="csxPh" src="https://portafoliosfit.um.edu.mx/cesarsanchez/wp-content/uploads/sites/184/2024/04/WhatsApp-Image-2024-04-23-at-3.27.58-PM.jpeg" alt="Fotografía de César Sánchez" loading="lazy"><span class="mono">Universidad de Montemorelos · FIT</span></div>
+      <div class="rv">
+        <p class="mono">Sobre mí</p>
+        <h2>Tecnología con <span class="acc">propósito</span></h2>
+        <p>Estudio Ingeniería en Gestión de Tecnologías de la Información en la Universidad de Montemorelos. Me interesa entender cómo funcionan los sistemas y las operaciones de una organización para encontrar oportunidades de mejora y proponer soluciones prácticas.</p>
+        <p>Complemento mi formación con experiencia en TI empresarial y con proyectos donde la tecnología sirve a personas reales: instituciones educativas, negocios locales y organizaciones sociales.</p>
+        <div class="kv">
+          <div><span class="mono">Intereses</span><b>Gestión de proyectos · Procesos · Análisis de datos</b></div>
+          <div><span class="mono">Idiomas</span><b>Español nativo · Inglés B2 (FCE)</b></div>
+          <div><span class="mono">Software</span><b>Java · Python · MySQL · Desarrollo web</b></div>
+          <div><span class="mono">TI empresarial</span><b>Ivanti · Microsoft 365 · Soporte</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="mq" aria-hidden="true"><div class="mq-t">
+    <span>Gestión de TI</span><em>✦</em><span>Java</span><em>✦</em><span>MySQL</span><em>✦</em><span>Coordinación de equipos</span><em>✦</em><span>Requisitos</span><em>✦</em><span>UX · Nielsen</span><em>✦</em><span>Python</span><em>✦</em><span>Ivanti</span><em>✦</em><span>Documentación de procesos</span><em>✦</em>
+    <span>Gestión de TI</span><em>✦</em><span>Java</span><em>✦</em><span>MySQL</span><em>✦</em><span>Coordinación de equipos</span><em>✦</em><span>Requisitos</span><em>✦</em><span>UX · Nielsen</span><em>✦</em><span>Python</span><em>✦</em><span>Ivanti</span><em>✦</em><span>Documentación de procesos</span><em>✦</em>
+  </div></div>
+
+  <!-- ===================== CONTACTO ===================== -->
+  <section class="ct wrap" id="csx-contacto">
+    <p class="mono rv">¿Tienes un proyecto o una vacante?</p>
+    <h2 class="rv"><a href="mailto:cesareds161@gmail.com">Hablemos.</a></h2>
+    <div class="btns rv">
+      <a class="btn pri" href="mailto:cesareds161@gmail.com">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm9 7.4L4.3 7H4v.3l8 5.6 8-5.6V7h-.3L12 12.4Z"/></svg>Correo</a>
+      <a class="btn" href="https://www.linkedin.com/in/c%C3%A9sarsanchez/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V21h-4v-5.6c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9V21h-4V9Z"/></svg>LinkedIn</a>
+      <a class="btn" href="https://github.com/CE455SaR" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>GitHub</a>
+      <a class="btn" href="https://wa.me/525535103049" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.4-.3Z"/></svg>WhatsApp</a>
+    </div>
+    <button class="copy rv" type="button" id="csxCopy">cesareds161@gmail.com · clic para copiar</button>
+    <p class="mono" style="margin-top:30px">Ciudad de México, México</p>
+  </section>
+  <div class="wrap foot">
+    <span class="mono">© 2026 César Eduardo Sánchez Rivera</span>
+    <span class="soc mono">
+      <a href="https://www.linkedin.com/in/c%C3%A9sarsanchez/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/CE455SaR" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://wa.me/525535103049" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="#csx-top">Arriba ↑</a>
+    </span>
+  </div>
+
+  <div class="lb" id="csxLb" role="dialog" aria-label="Imagen ampliada"><div><img alt=""><p></p></div></div>
+</div>
+
+<script>
+(function(){
+  var R=document.getElementById('csx'); if(!R) return;
+  R.classList.add('js');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var $=function(s,c){return (c||R).querySelector(s)}, $$=function(s,c){return Array.prototype.slice.call((c||R).querySelectorAll(s))};
+
+  /* 1. Ancho completo y "sticky" aunque el tema tenga contenedores con overflow */
+  function bleed(){
+    R.style.marginLeft='0';R.style.width='auto';
+    var l=R.getBoundingClientRect().left, w=document.documentElement.clientWidth;
+    R.style.marginLeft=(-l)+'px'; R.style.width=w+'px';
+  }
+  var p=R.parentElement;
+  while(p && p!==document.documentElement){
+    var cs=getComputedStyle(p);
+    if(/hidden|auto|scroll/.test(cs.overflow+cs.overflowX+cs.overflowY)){p.style.setProperty('overflow','visible','important');}
+    if(cs.transform!=='none'){p.style.setProperty('transform','none','important');}
+    p=p.parentElement;
+  }
+  bleed(); window.addEventListener('resize',bleed);
+
+  /* 2. Separar letras del título y palabras del manifiesto */
+  var d=0;
+  $$('[data-split]').forEach(function(el){
+    el.innerHTML=el.textContent.split('').map(function(c){d+=.045;return '<span class="ch" style="animation-delay:'+(.2+d).toFixed(2)+'s">'+c+'</span>'}).join('');
+  });
+  var mp=$('[data-words]');
+  /* {frase} = verde, [frase] = azul */
+  mp.innerHTML=mp.textContent.trim().split(/(\{[^}]+\}|\[[^\]]+\])/).map(function(seg){
+    var cls='';
+    if(/^\{.*\}$/.test(seg)){cls=' hl';seg=seg.slice(1,-1)} else if(/^\[.*\]$/.test(seg)){cls=' hl2';seg=seg.slice(1,-1)}
+    return seg.split(/\s+/).filter(Boolean).map(function(w){return '<span class="w'+cls+'">'+w+'</span>'}).join(' ');
+  }).filter(Boolean).join(' ');
+  var words=$$('.w',mp);
+
+  /* 3. Roles rotativos */
+  var roles=$('#csxRoles'), ri=0, rn=roles.children.length;
+  setInterval(function(){
+    ri++; roles.style.transition='transform .6s cubic-bezier(.2,.8,.2,1)';
+    roles.style.transform='translateY(-'+(ri*1.6)+'em)';
+    if(ri===rn-1){setTimeout(function(){roles.style.transition='none';roles.style.transform='none';ri=0},700)}
+  },2600);
+
+  /* 4. Red de nodos en el hero */
+  var cv=$('#csxNet'), cx=cv.getContext('2d'), N=[], mouse={x:-999,y:-999}, W,H,dpr=Math.min(window.devicePixelRatio||1,2);
+  function size(){W=cv.offsetWidth;H=cv.offsetHeight;cv.width=W*dpr;cv.height=H*dpr;cx.setTransform(dpr,0,0,dpr,0,0);
+    var n=Math.min(110,Math.round(W*H/14000)); N=[];
+    for(var i=0;i<n;i++)N.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35});}
+  size(); window.addEventListener('resize',size);
+  cv.parentElement.addEventListener('mousemove',function(e){var r=cv.getBoundingClientRect();mouse.x=e.clientX-r.left;mouse.y=e.clientY-r.top});
+  cv.parentElement.addEventListener('mouseleave',function(){mouse.x=mouse.y=-999});
+  var heroOn=true;
+  function draw(){
+    if(heroOn){
+      cx.clearRect(0,0,W,H);
+      for(var i=0;i<N.length;i++){var a=N[i];
+        if(!reduce){a.x+=a.vx;a.y+=a.vy;if(a.x<0||a.x>W)a.vx*=-1;if(a.y<0||a.y>H)a.vy*=-1;}
+        var dm=Math.hypot(a.x-mouse.x,a.y-mouse.y);
+        for(var j=i+1;j<N.length;j++){var b=N[j],dd=Math.hypot(a.x-b.x,a.y-b.y);
+          if(dd<130){cx.strokeStyle='rgba(124,156,255,'+(1-dd/130)*.22+')';cx.lineWidth=1;cx.beginPath();cx.moveTo(a.x,a.y);cx.lineTo(b.x,b.y);cx.stroke();}}
+        if(dm<170){cx.strokeStyle='rgba(124,242,164,'+(1-dm/170)*.6+')';cx.beginPath();cx.moveTo(a.x,a.y);cx.lineTo(mouse.x,mouse.y);cx.stroke();}
+        cx.fillStyle=dm<170?'#7CF2A4':'rgba(233,237,244,.5)';cx.beginPath();cx.arc(a.x,a.y,dm<170?2.2:1.4,0,6.3);cx.fill();}
+    }
+    requestAnimationFrame(draw);
+  }
+  draw();
+
+  /* 5. Aparición, contadores, pasos del scrollytelling */
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
+  $$('.rv').forEach(function(el){io.observe(el)});
+
+  var co=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;co.unobserve(e.target);
+    var el=e.target,t=+el.dataset.count,s=performance.now();
+    (function tick(n){var k=Math.min(1,(n-s)/1400);el.textContent=Math.round(t*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(tick)})(s);})},{threshold:.6});
+  $$('[data-count]').forEach(function(el){co.observe(el)});
+
+  var narrow=window.matchMedia('(max-width:1100px)');
+  $$('.scrolly').forEach(function(sc){
+    var vis=$$('.vis',sc), steps=$$('.step',sc), stage=$('.stage',sc);
+    /* Indicador "02 / 05" con barras bajo la evidencia fija */
+    var ind=document.createElement('div'); ind.className='stage-ind';
+    ind.innerHTML='<span class="mono"><span class="acc">01</span> / '+('0'+steps.length).slice(-2)+'</span><span class="dots">'+steps.map(function(){return '<i></i>'}).join('')+'</span>';
+    stage.appendChild(ind);
+    var indN=$('.acc',ind), dots=$$('.dots i',ind);
+    function activate(n){
+      steps.forEach(function(s){s.classList.toggle('on',s.dataset.s===n)});
+      vis.forEach(function(v){v.classList.toggle('on',v.dataset.v===n)});
+      indN.textContent=('0'+n).slice(-2); dots.forEach(function(d,i){d.classList.toggle('on',String(i+1)===n)});
+    }
+    var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)activate(e.target.dataset.s)})},{rootMargin:'-45% 0px -45% 0px'});
+    steps.forEach(function(s){so.observe(s)});
+    activate('1');
+    /* Tablet y celular: cada evidencia aparece dentro de su paso, junto a su texto */
+    steps.forEach(function(s){
+      var tx=document.createElement('div'); tx.className='st-tx';
+      while(s.firstChild) tx.appendChild(s.firstChild);
+      s.appendChild(tx);
+      var v=vis.filter(function(x){return x.dataset.v===s.dataset.s})[0]; if(!v)return;
+      var c=v.cloneNode(true); c.classList.add('vis-m','on'); c.removeAttribute('data-v'); s.appendChild(c);
+    });
+    var setM=function(){ $$('.vis-m',sc).forEach(function(c){c.style.display=narrow.matches?'':'none'}) };
+    setM(); window.addEventListener('resize',setM);
+  });
+
+  /* 6. Vista previa al pasar el cursor por el índice */
+  var pk=$('#csxPeek'), pki=$('img',pk);
+  $$('[data-peek]').forEach(function(a){
+    a.addEventListener('mouseenter',function(){pki.src=a.dataset.peek;pk.classList.add('on')});
+    a.addEventListener('mouseleave',function(){pk.classList.remove('on')});
+    a.addEventListener('mousemove',function(e){pk.style.left=e.clientX+'px';pk.style.top=e.clientY+'px'});
+  });
+
+  /* 7. Carrusel de otros proyectos: flechas, arrastre con mouse, dedo, trackpad y teclado */
+  var hz=$('#csxHz'), tr=$('#csxTrack'), cards=$$('.card',tr), prev=$('#csxPrev'), next=$('#csxNext'), cnt=$('#csxCount'), bar=$('#csxBar');
+  new IntersectionObserver(function(es,o){es.forEach(function(e){if(e.isIntersecting){hz.classList.add('in');o.disconnect()}})},{threshold:.2}).observe(hz);
+  function curIdx(){
+    var best=0,bd=1e9,ref=tr.getBoundingClientRect().left+parseFloat(getComputedStyle(tr).paddingLeft);
+    cards.forEach(function(c,i){var dd=Math.abs(c.getBoundingClientRect().left-ref);if(dd<bd){bd=dd;best=i}});
+    var max=tr.scrollWidth-tr.clientWidth; if(max>0&&tr.scrollLeft>=max-4) best=cards.length-1;
+    return best;
+  }
+  function hzUpdate(){
+    var i=curIdx(), max=tr.scrollWidth-tr.clientWidth;
+    cards.forEach(function(c,k){c.classList.toggle('act',k===i)});
+    cnt.textContent=('0'+(i+1)).slice(-2)+' / '+('0'+cards.length).slice(-2);
+    bar.style.width=(max>0?(tr.scrollLeft/max)*100:100)+'%';
+    prev.disabled=tr.scrollLeft<=4; next.disabled=tr.scrollLeft>=max-4;
+  }
+  function goTo(i){ i=Math.max(0,Math.min(cards.length-1,i));
+    tr.scrollTo({left:cards[i].offsetLeft-cards[0].offsetLeft,behavior:reduce?'auto':'smooth'}); }
+  prev.addEventListener('click',function(){goTo(curIdx()-1)});
+  next.addEventListener('click',function(){goTo(curIdx()+1)});
+  tr.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){e.preventDefault();goTo(curIdx()+1)} if(e.key==='ArrowLeft'){e.preventDefault();goTo(curIdx()-1)}});
+  tr.addEventListener('scroll',function(){requestAnimationFrame(hzUpdate)},{passive:true});
+  window.addEventListener('resize',hzUpdate); hzUpdate();
+  /* Arrastre con mouse (en pantallas táctiles el navegador ya desliza solo) */
+  var dragging=false, sx=0, sl=0, moved=0, vx=0, lx=0, lt=0;
+  tr.addEventListener('pointerdown',function(e){ if(e.pointerType!=='mouse'||e.button!==0)return;
+    dragging=true; moved=0; sx=lx=e.clientX; sl=tr.scrollLeft; lt=performance.now(); vx=0; tr.classList.add('drag'); });
+  window.addEventListener('pointermove',function(e){ if(!dragging)return;
+    var dx=e.clientX-sx; moved=Math.max(moved,Math.abs(dx)); tr.scrollLeft=sl-dx;
+    var n=performance.now(); vx=(e.clientX-lx)/Math.max(1,n-lt); lx=e.clientX; lt=n; });
+  window.addEventListener('pointerup',function(){ if(!dragging)return; dragging=false; tr.classList.remove('drag');
+    if(performance.now()-lt>90) vx=0;
+    var target=curIdx(); if(Math.abs(vx)>.4) target+= vx<0?1:-1; goTo(target); });
+  tr.addEventListener('click',function(e){ if(moved>6){e.preventDefault();e.stopPropagation();moved=0} },true);
+  tr.addEventListener('dragstart',function(e){e.preventDefault()});
+
+  /* 8. Bucle de scroll: progreso, manifiesto, horizontal, línea de tiempo, foto, nav */
+  var prog=$('#csxProg'), mani=$('#csxMani'), tl=$('#csxTl'), fill=$('.fill',tl), tlis=$$('li',tl), ph=$('#csxPh'),
+      navs=$$('[data-nav]'), secs=navs.map(function(a){return R.querySelector(a.getAttribute('href'))}), ticking=false;
+  function onScroll(){
+    var vh=window.innerHeight, rr=R.getBoundingClientRect();
+    prog.style.transform='scaleX('+Math.min(1,Math.max(0,-rr.top/(rr.height-vh)))+')';
+    heroOn=$('.hero').getBoundingClientRect().bottom>0;
+
+    /* Manifiesto: empieza a encenderse al entrar y termina al 80 % del recorrido fijo */
+    var m=mani.getBoundingClientRect(), mpg=Math.min(1,Math.max(0,(-m.top+vh*.35)/(m.height-vh*.65)));
+    var lit=Math.ceil(Math.min(1,mpg/.8)*words.length);
+    words.forEach(function(w,i){w.style.opacity=i<lit?1:.14});
+
+    var t=tl.getBoundingClientRect(), tp=Math.min(1,Math.max(0,(vh*.6-t.top)/t.height));
+    fill.style.height=(tp*100)+'%';
+    tlis.forEach(function(li){li.classList.toggle('in',li.getBoundingClientRect().top<vh*.6)});
+
+    if(!reduce){var pr=ph.parentElement.getBoundingClientRect(); ph.style.transform='translateY('+(-((vh-pr.top)/(vh+pr.height))*16)+'%)';}
+
+    var cur=-1; secs.forEach(function(s,i){if(s&&s.getBoundingClientRect().top<vh*.4)cur=i});
+    navs.forEach(function(a,i){a.classList.toggle('on',i===cur)});
+    ticking=false;
+  }
+  window.addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(onScroll)}},{passive:true});
+  onScroll();
+
+  /* 9. Desplazamiento suave en enlaces internos */
+  $$('a[href^="#csx"]').forEach(function(a){a.addEventListener('click',function(e){
+    var t=R.querySelector(a.getAttribute('href')); if(!t)return; e.preventDefault();
+    window.scrollTo({top:t.getBoundingClientRect().top+window.pageYOffset-(t.id==='csx-top'?0:20),behavior:reduce?'auto':'smooth'});})});
+
+  /* 10. Lightbox para evidencias */
+  var lb=$('#csxLb'), lbi=$('img',lb), lbp=$('p',lb);
+  $$('img[data-zoom]').forEach(function(im){im.addEventListener('click',function(){
+    lbi.src=im.src.replace(/-\d+x\d+(\.\w+)$/,'$1'); lbi.onerror=function(){lbi.onerror=null;lbi.src=im.src};
+    lbp.textContent=im.alt; lb.classList.add('on');})});
+  lb.addEventListener('click',function(){lb.classList.remove('on')});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('on')});
+
+  /* 11. Copiar correo */
+  var cp=$('#csxCopy');
+  cp.addEventListener('click',function(){
+    var mail='cesareds161@gmail.com', done=function(){cp.textContent='¡Correo copiado! ✓';setTimeout(function(){cp.textContent=mail+' · clic para copiar'},2200)};
+    if(navigator.clipboard){navigator.clipboard.writeText(mail).then(done,function(){window.location.href='mailto:'+mail})}
+    else window.location.href='mailto:'+mail;
+  });
+})();
+</script>
+
+</body>
+</html>
